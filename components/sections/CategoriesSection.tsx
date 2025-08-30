@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Globe, Brain, Bitcoin, ShoppingBag, Sparkles, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function CategoriesSection() {
   const categories = [
@@ -8,35 +9,40 @@ export function CategoriesSection() {
       title: "Website Service",
       description: "Custom web development with cutting-edge design and performance optimization",
       features: ["Responsive Design", "SEO Optimized", "Performance First", "Modern UI/UX"],
-      gradient: "from-gray-900 to-black"
+      gradient: "from-gray-900 to-black",
+      link: "/services"
     },
     {
       icon: <Brain className="w-12 h-12" />,
       title: "AI Learning",
       description: "Advanced artificial intelligence training and machine learning solutions",
       features: ["Neural Networks", "Deep Learning", "Computer Vision", "NLP Processing"],
-      gradient: "from-black to-gray-800"
+      gradient: "from-black to-gray-800",
+      link: "/ai-learning"
     },
     {
       icon: <Bitcoin className="w-12 h-12" />,
       title: "Crypto Learning",
       description: "Comprehensive blockchain education and cryptocurrency trading strategies",
       features: ["DeFi Protocols", "Smart Contracts", "Trading Bots", "Portfolio Management"],
-      gradient: "from-gray-800 to-gray-900"
+      gradient: "from-gray-800 to-gray-900",
+      link: "/crypto-learning"
     },
     {
       icon: <ShoppingBag className="w-12 h-12" />,
       title: "Software Shop",
       description: "Premium software solutions and digital tools for modern businesses",
       features: ["Enterprise Tools", "Custom Software", "API Integration", "Cloud Solutions"],
-      gradient: "from-gray-900 to-black"
+      gradient: "from-gray-900 to-black",
+      link: "/software-shop"
     },
     {
       icon: <Sparkles className="w-12 h-12" />,
       title: "Mystical Service",
       description: "Esoteric digital experiences and metaphysical technology applications",
       features: ["Quantum Computing", "Consciousness AI", "Digital Divination", "Energy Optimization"],
-      gradient: "from-black to-gray-700"
+      gradient: "from-black to-gray-700",
+      link: "/mystical-service"
     }
   ];
 
@@ -89,13 +95,15 @@ export function CategoriesSection() {
                   ))}
                 </ul>
                 
-                <Button 
-                  variant="outline" 
-                  className="w-full border-white/30 text-black hover:bg-white hover:!text-black transition-all duration-300 group/btn"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <Link href={category.link}>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-white/30 text-black hover:bg-white hover:!text-black transition-all duration-300 group/btn"
+                  >
+                    {category.title === "Website Service" ? "View Services" : "Learn More"}
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

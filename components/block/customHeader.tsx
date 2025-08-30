@@ -53,10 +53,10 @@ interface CustomHeaderProps {
 
 const CustomHeader = ({
     logo = {
-        url: "https://www.shadcnblocks.com",
-        src: "https://shadcnblocks.com/images/block/logos/shadcnblockscom-icon.svg",
-        alt: "logo",
-        title: "Shadcnblocks.com",
+        url: "/",
+        src: "/d34nlabs-logo.svg",
+        alt: "D34nLabs Logo",
+        title: "D34nLabs",
     },
     menu = [
         { title: "Home", url: "#" },

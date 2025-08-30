@@ -1,20 +1,20 @@
-import { Globe, Brain, Bitcoin, ShoppingBag, Sparkles, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Globe, Code, Palette, ShoppingCart, Zap, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from "lucide-react";
 
 export function FooterSection() {
   const services = [
-    { name: "Website Service", icon: <Globe className="w-4 h-4" /> },
-    { name: "AI Learning", icon: <Brain className="w-4 h-4" /> },
-    { name: "Crypto Learning", icon: <Bitcoin className="w-4 h-4" /> },
-    { name: "Software Shop", icon: <ShoppingBag className="w-4 h-4" /> },
-    { name: "Mystical Service", icon: <Sparkles className="w-4 h-4" /> }
+    { name: "Shopify Development", icon: <ShoppingCart className="w-4 h-4" /> },
+    { name: "Webflow Development", icon: <Palette className="w-4 h-4" /> },
+    { name: "Landing Pages", icon: <Globe className="w-4 h-4" /> },
+    { name: "Custom Development", icon: <Code className="w-4 h-4" /> },
+    { name: "Performance Optimization", icon: <Zap className="w-4 h-4" /> }
   ];
 
   const quickLinks = [
-    "About Us", "Our Team", "Careers", "Press", "Partners", "Investors"
+    "About Us", "Our Work", "Process", "Testimonials", "Case Studies", "Contact"
   ];
 
   const resources = [
-    "Documentation", "API Reference", "Help Center", "Community", "Blog", "Status"
+    "Portfolio", "Blog", "Resources", "Support", "FAQ", "Getting Started"
   ];
 
   const legal = [
@@ -29,29 +29,28 @@ export function FooterSection() {
           {/* Company info */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-black" />
-              </div>
-              <span className="text-2xl font-bold">FutureTech</span>
+              <img src="/d34nlabs-logo.svg" className="w-10 h-10" alt="D34nLabs Logo" />
+              <span className="text-2xl font-bold">D34nLabs</span>
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed max-w-md">
-              Transforming the digital landscape through cutting-edge AI, blockchain, 
-              and mystical technologies. Building tomorrow's solutions today.
+              Professional web development services specializing in Shopify, Webflow, 
+              and custom solutions. Transforming your digital presence with modern, 
+              high-performance websites.
             </p>
             
             {/* Contact info */}
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-300">
                 <Mail className="w-5 h-5" />
-                <span>contact@futuretech.com</span>
+                <span>hello@d34nlabs.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (555) D34N-LABS</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-5 h-5" />
-                <span>Silicon Valley, CA</span>
+                <span>Remote & Global</span>
               </div>
             </div>
           </div>
@@ -116,7 +115,7 @@ export function FooterSection() {
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
             <p className="text-gray-300 mb-8">
-              Get the latest insights on AI, blockchain, and emerging technologies delivered to your inbox.
+              Get the latest web development tips, industry insights, and project updates delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input 
@@ -138,7 +137,7 @@ export function FooterSection() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
             <div className="text-gray-400 text-sm">
-              © 2024 FutureTech. All rights reserved.
+              © 2024 D34nLabs. All rights reserved.
             </div>
 
             {/* Legal links */}
@@ -157,7 +156,7 @@ export function FooterSection() {
             {/* Social links */}
             <div className="flex gap-4">
               {[
-                { icon: <Facebook className="w-5 h-5" />, label: "Facebook" },
+                { icon: <Github className="w-5 h-5" />, label: "GitHub" },
                 { icon: <Twitter className="w-5 h-5" />, label: "Twitter" },
                 { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn" },
                 { icon: <Instagram className="w-5 h-5" />, label: "Instagram" }
