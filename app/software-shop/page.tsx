@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Palette, Bot, Gamepad2, ListChecks, Layers, ArrowRight, Zap } from "lucide-react";
@@ -11,6 +12,7 @@ type Tool = {
   price: string; // Add price field
   type: string; // Add type field
   icon: React.ReactNode; // Add icon field
+  image?: string; // Add image field for logos
 };
 
 type CategoryKey = "All" | "General" | "Design" | "AI" | "MMO";
@@ -114,13 +116,23 @@ export default function SoftwareShopPage() {
                 {/* Gradient overlay for hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                {/* Header with Icon */}
+                {/* Header with Logo */}
                 <div className="relative px-8 pt-8 pb-4">
                   <div className="flex items-center justify-between mb-6">
                     <div className="p-3 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-white group-hover:text-white/90 transition-colors">
-                        {tool.icon}
-                      </div>
+                      {tool.image ? (
+                        <Image 
+                          src={tool.image} 
+                          alt={`${tool.name} logo`}
+                          width={32}
+                          height={32}
+                          className="object-contain"
+                        />
+                      ) : (
+                        <div className="w-8 h-8 bg-gray-600 rounded-lg flex items-center justify-center">
+                          <span className="text-xs text-white">Logo</span>
+                        </div>
+                      )}
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-white mb-1">{tool.price}</div>
