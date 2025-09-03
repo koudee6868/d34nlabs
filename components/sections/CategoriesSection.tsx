@@ -14,7 +14,7 @@ export function CategoriesSection() {
     },
     {
       icon: <Brain className="w-12 h-12" />,
-      title: "AI Learning",
+      title: "AI Service",
       description: "Advanced artificial intelligence training and machine learning solutions",
       features: ["Neural Networks", "Deep Learning", "Computer Vision", "NLP Processing"],
       gradient: "from-black to-gray-800",
